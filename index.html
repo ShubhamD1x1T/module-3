@@ -35,20 +35,28 @@
     // console.log(h2);
     // let h1all = document.querySelectorAll("h1");
     // console.log(h1all);
-let ele = document.createElement("div");
-ele.innerHTML = "I am div";
-//console.log(ele);
+
 
 let body = document.querySelector("body");
-body.appendChild(ele);
+
 btn.style.width = "480px";
 btn.style.height = "2rem";
 btn.style.backgroundColor = "black";
 btn.style.color = "white";
 
-ele.style.color = "green";
-ele.style.width = "280px";
-ele.style.marginLeft = "2rem";
+btn.addEventListener("click",function(){
+    //console.log("button is clicked");
+    let ele = document.createElement("div");
+    ele.innerHTML = "button is clicked";
+    body.appendChild(ele);
+    ele.style.marginTop = "2rem";
+    ele.style.marginLeft= "2rem";
+    ele.style.height = "1rem";
+    ele.style.textAlign = "center";
+    ele.style.backgroundColor = "yellow";
+    ele.style.color = "green";
+})
+
     
 </script>
 </html>
