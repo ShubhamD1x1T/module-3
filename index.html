@@ -7,31 +7,48 @@
     <title>Document</title>
 </head>
 <body>
-    <button>Hi i a  button click in me</button>
-    <div>Hello i am div 1</div>
+    <button xyz = "custom attribute" class = "first">Hi i a  button click in me</button>
+    <!-- <div>Hello i am div 1</div>
     <div>hello i am div 2</div>
     <div>hello i am div 3</div>
     <h1>i am heading 1</h1>
     <h2>i am heading 2</h2>
-    <h1>i am sub heading</h1>
+    <h1>i am sub heading</h1> -->
 </body>
 <script>
     console.log("Hello world");
     let btn = document.querySelector("button");
     console.log(btn);
-    console.log("------------------");
-    let variableDiv = document.querySelector("div");
-    console.log(variableDiv);
-    console.log("-----------------");
-    let allDiv = document.querySelectorAll("div");
-    console.log(allDiv);
-    let h1 = document.querySelector("h1");
-    console.log(h1);
-    let h2 = document.querySelector("h2");
-    console.log(h2);
-    let h1all = document.querySelectorAll("h1");
-    console.log(h1all);
+    let atr = btn.getAttribute("xyz");
+    console.log("xyz->",atr);
+    let atr1 = btn.getAttribute("class");
+    console.log("class",atr1);
+    // console.log("------------------");
+    // let variableDiv = document.querySelector("div");
+    // console.log(variableDiv);
+    // console.log("-----------------");
+    // let allDiv = document.querySelectorAll("div");
+    // console.log(allDiv);
+    // let h1 = document.querySelector("h1");
+    // console.log(h1);
+    // let h2 = document.querySelector("h2");
+    // console.log(h2);
+    // let h1all = document.querySelectorAll("h1");
+    // console.log(h1all);
+let ele = document.createElement("div");
+ele.innerHTML = "I am div";
+//console.log(ele);
 
+let body = document.querySelector("body");
+body.appendChild(ele);
+btn.style.width = "480px";
+btn.style.height = "2rem";
+btn.style.backgroundColor = "black";
+btn.style.color = "white";
+
+ele.style.color = "green";
+ele.style.width = "280px";
+ele.style.marginLeft = "2rem";
     
 </script>
 </html>
