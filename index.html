@@ -8,12 +8,33 @@
 </head>
 <body>
     <button xyz = "custom attribute" class = "first">Hi i a  button click in me</button>
+    <table>
+        <thead>
+            <th>
+    <div>
+        <button class = "a"><h1>Red</h1></button>
+    </div>
+    </th>
+    <th>
+    <div>
+        <button class="b"><h1>blue</h1></button>
+    </div>
+    </th>
+    <th>
+        <div>
+            <button class="c"><h1>green</h1></button>
+        </div>
+    </th>
+    </thead>
+    </table>
+    
     <!-- <div>Hello i am div 1</div>
     <div>hello i am div 2</div>
     <div>hello i am div 3</div>
     <h1>i am heading 1</h1>
     <h2>i am heading 2</h2>
     <h1>i am sub heading</h1> -->
+
 </body>
 <script>
     console.log("Hello world");
@@ -23,6 +44,62 @@
     console.log("xyz->",atr);
     let atr1 = btn.getAttribute("class");
     console.log("class",atr1);
+    
+    let div = document.querySelectorAll("div");
+    let btn1 = document.querySelector(".a");
+    //console.log(btn1);
+    btn1.style.marginTop="208px";
+    
+    btn1.style.backgroundColor = "red";
+    btn1.style.height = "100px";
+    btn1.style.width = "140px";
+    btn1.style.color = "white";
+
+    btn1.addEventListener("click",function(){
+        let body = document.querySelector("body");
+        if(body.style.backgroundColor=="red")
+            body.style.backgroundColor="white";
+        else 
+        body.style.backgroundColor = "red";
+    })
+    
+
+    let btn2 = document.querySelector(".b");
+    //console.log(btn2);
+    btn2.style.marginLeft="5rem"
+    btn2.style.marginTop="208px";
+    btn2.style.backgroundColor = "blue";
+    btn2.style.height = "100px";
+    btn2.style.width = "140px";
+    btn2.style.color = "white";
+    btn2.addEventListener("click",function(){
+        let body = document.querySelector("body");
+        if(body.style.backgroundColor=="blue")
+            body.style.backgroundColor="white";
+        else 
+        body.style.backgroundColor = "blue";
+    })
+
+    let btn3 = document.querySelector(".c");
+    btn3.style.marginLeft="5rem"
+    btn3.style.marginTop="208px";
+    btn3.style.backgroundColor = "green";
+    btn3.style.height = "100px";
+    btn3.style.width = "140px";
+    btn3.style.color = "white";
+    
+    btn3.addEventListener("click",function(){
+        let body = document.querySelector("body");
+        if(body.style.backgroundColor=="green")
+            body.style.backgroundColor="white";
+        else 
+        body.style.backgroundColor = "green";
+    })
+
+    
+
+
+
     // console.log("------------------");
     // let variableDiv = document.querySelector("div");
     // console.log(variableDiv);
@@ -37,28 +114,28 @@
     // console.log(h1all);
 
 
-let body = document.querySelector("body");
+
 
 btn.style.width = "480px";
 btn.style.height = "2rem";
 btn.style.backgroundColor = "black";
 btn.style.color = "white";
 
-btn.addEventListener("click",function(){
-    //console.log("button is clicked");
-    let ele = document.createElement("div");
-    ele.innerHTML = "button is clicked";
-    body.appendChild(ele);
-    ele.style.marginTop = "2rem";
-    ele.style.marginLeft= "2rem";
-    ele.style.height = "1rem";
-    ele.style.textAlign = "center";  
-    ele.style.backgroundColor = "yellow";
-    ele.style.color = "green";
-})
-body.addEventListener("keypress",function(e){
-    console.log(e.key);
-})
+// btn.addEventListener("click",function(){
+//     //console.log("button is clicked");
+//     let ele = document.createElement("div");
+//     ele.innerHTML = "button is clicked";
+//     body.appendChild(ele);
+//     ele.style.marginTop = "2rem";
+//     ele.style.marginLeft= "2rem";
+//     ele.style.height = "1rem";
+//     ele.style.textAlign = "center";  
+//     ele.style.backgroundColor = "yellow";
+//     ele.style.color = "green";
+// })
+// body.addEventListener("keypress",function(e){
+//     console.log(e.key);
+//})
     
 </script>
 </html>
