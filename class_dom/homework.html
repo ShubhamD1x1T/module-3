@@ -13,6 +13,27 @@
 
     <script>
       //    Q Create a button that is destroyed by clicking on it but two new buttons are created in it's place.
+      let divtag = document.querySelector("#doubleHolder");
+      //console.log(btn);
+      divtag.addEventListener("click",function(e){
+        if(e.target.classList.contains("double")){
+          let btn1 = document.createElement("button");
+          btn1.setAttribute("class","double");
+          btn1.innerHTML = "double";
+
+          let btn2 = document.createElement("button");
+          btn2.setAttribute("class","double");
+          btn2.innerHTML = "double";
+
+          this.appendChild(btn1);
+          this.appendChild(btn2);
+
+          this.removeChild(e.target);
+
+
+        }
+      })
+      
     </script>
   </body>
 </html>
